@@ -1,0 +1,15 @@
+<h1>Welcome to Madlibs</h1>
+<p>The game where you create your own stories over and over again</p>
+
+<ul>
+	<li><%= link_to "Create your Own Game Board Story", stories_path %></li>
+	<li>Play the Madlibs Game! Here are the available story titles</li>
+		<% @stories.each do |story| %>
+
+			<ul>
+				<li><%= link_to "#{story.title}", controller: "welcome",  action: "userinput", title: "#{story.title}"  %></li>
+			</ul>
+		<% end %>
+
+</ul>
+

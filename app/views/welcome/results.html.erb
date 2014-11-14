@@ -1,0 +1,9 @@
+<h1>Your Story!</h1>
+
+<% @stories.each do |story| %>
+    <%# if story.title == @selectedtitle %>
+        <h4><%= story.title %></h4>
+        <p><%= story.section1 %> <strong><%= @firstword %></strong> <%=story.section2 %> <strong><%= @secondword %></strong> <%=story.section3%> <strong><%= @thirdword%></strong> <%= story.section4 %></p>
+
+    <%# end %>
+<% end %>

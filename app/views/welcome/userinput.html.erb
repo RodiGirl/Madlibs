@@ -1,0 +1,23 @@
+<h1>Adding your words</h1>
+<p>Let select the words that will be in your story.</p>
+
+<h3>Title: <%= @title %></h3>
+<% @selectedtitle = @title %>
+
+<% @stories.each do |story| %>
+  <% if story.title == @title %>
+   <%= form_tag '/results', method: "post" do %>
+        <%= story.word1type %> <input type="string" name="firstword" value=""><br> 
+        <%= story.word2type %> <input type="string" name="secondword" value=""><br>
+        <%= story.word3type %> <input type="string" name="thirdword" value=""><br>
+        Title: <input type="text" name="title" value = "#{@selectedtitle}"><br>
+        <%= submit_tag "Write my story" %>
+    <% end %>
+    <% end %>
+<% end %>
+
+<%= link_to "Return to Home Menu", root_path %>
+
+
+
+
