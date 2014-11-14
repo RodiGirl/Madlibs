@@ -4,20 +4,19 @@
 <h3>Title: <%= @title %></h3>
 
 
+
 <% @stories.each do |story| %>
   <% if story.title == @title %>
    <%= form_tag '/results', method: "post" do %>
-        <%= story.word1type %> <input type="string" name="firstword" value=""><br> 
-        <%= story.word2type %> <input type="string" name="secondword" value=""><br>
-        <%= story.word3type %> <input type="string" name="thirdword" value=""><br>
-        Title: <input type="text" name="title" value = "<%= @title %>" ><br>
-        <%= submit_tag "Write my story" %>
+        <%= story.word1type %> <input style="color: black" type="string" name="firstword" value="" color="black"><br> 
+        <%= story.word2type %> <input style="color: black" type="string" name="secondword" value="" color="black"><br>
+        <%= story.word3type %> <input style="color: black" type="string" name="thirdword" value="" color="black"><br>
+        <input type="hidden" name="title" value = "<%= @title %>" ><br> 
+        <%= submit_tag "Write my story" , style: "color: black;" %>
     <% end %>
     <% end %>
 <% end %>
 
 <%= link_to "Return to Home Menu", root_path %>
-
-
 
 

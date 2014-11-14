@@ -1,9 +1,18 @@
+<br>
+
+
+<center>
 <h1>Welcome to Madlibs</h1>
-<p>The game where you create your own stories over and over again</p>
+<h3>The game where you can create new stories over and over again</h3>
+<h2>___________________________</h2>
+</center>
+<br>
+
+<h3>What would you like to do first? Click on one of the options below: </h3>
 
 <ul>
 	<li><%= link_to "Create your Own Game Board Story", stories_path %></li>
-	<li>Play the Madlibs Game! Here are the available story titles</li>
+	<li>Play the Madlibs Game! Begin by clicking on an available story title below.</li>
 		<% @stories.each do |story| %>
 
 			<ul>
@@ -12,4 +21,6 @@
 		<% end %>
 
 </ul>
+
+		
 

@@ -3,7 +3,7 @@
 <% @stories.each do |story| %>
     <% if story.title == @title %>
         <h4><%= story.title %></h4>
-        <p><%= story.section1 %> <strong><%= @firstword %></strong> <%=story.section2 %> <strong><%= @secondword %></strong> <%=story.section3%> <strong><%= @thirdword%></strong> <%= story.section4 %></p>
+        <p><%= story.section1 %> <strong><u><%= @firstword %></strong></u> <%=story.section2 %> <strong><u><%= @secondword %></strong></u> <%=story.section3%> <strong><u><%= @thirdword%></strong></u> <%= story.section4 %></p>
 
     <% end %>
 <% end %>
