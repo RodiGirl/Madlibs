@@ -2,7 +2,7 @@
 <p>Let select the words that will be in your story.</p>
 
 <h3>Title: <%= @title %></h3>
-<% @selectedtitle = @title %>
+
 
 <% @stories.each do |story| %>
   <% if story.title == @title %>
@@ -10,7 +10,7 @@
         <%= story.word1type %> <input type="string" name="firstword" value=""><br> 
         <%= story.word2type %> <input type="string" name="secondword" value=""><br>
         <%= story.word3type %> <input type="string" name="thirdword" value=""><br>
-        Title: <input type="text" name="title" value = "<%= @selectedtitle %>" ><br>
+        Title: <input type="text" name="title" value = "<%= @title %>" ><br>
         <%= submit_tag "Write my story" %>
     <% end %>
     <% end %>
