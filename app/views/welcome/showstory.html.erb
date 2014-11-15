@@ -1,2 +1,11 @@
-<h1>Welcome#showstory</h1>
-<p>Find me in app/views/welcome/showstory.html.erb</p>
+<h1>Select Your Story to Play!</h1>
+<p>Select a story of your choice from the list below to beging playing:</p>
+
+<% @stories.each do |story| %>
+
+	<ul>
+		<li><%= link_to "#{story.title}", controller: "welcome",  action: "userinput", title: "#{story.title}"  %></li>
+	</ul>
+<% end %>
+
+

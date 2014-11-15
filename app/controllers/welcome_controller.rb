@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
   end
 
   def showstory
+    @stories = Story.all
   end
 
   def userinput

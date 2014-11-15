@@ -1,0 +1,126 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  background: url(<%= asset_path "bg.png" %>) no-repeat  ;
+  background-size: cover;
+  background-position: 0px 100px;
+  max-height: 450px;
+}
+
+#btn-add {
+  position:absolute;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+  top: 100px;
+  right: 150px;
+  z-index:9999;
+
+}
+
+
+#btn-play {
+  position:absolute;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+  top: 225px;
+  right: 200px;
+  z-index:9999;
+
+}
+
+
+#btn-add1 {
+  position:absolute;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+  top: 100px;
+  right: 160px;
+  z-index:9999;
+}
+
+#btn-play1 {
+  position:absolute;
+  -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+  top: 225px;
+  right: 212px;
+  z-index:9999;
+}
+
+a.btn {
+  color:#fff2cd;
+  font-size:18px;
+  background:#918f8f;
+
+}
+
+.userword {
+  color:orangered;
+  font-weight: bold;
+
+}
+
+/*a:link { 
+  color: orange;
+}
+a:visited { 
+  color: orange;
+}
+a:hover { 
+  color: orange;
+}
+a:active { 
+  color: orange;
+}*/
+
+
+.container {
+  background: rgba(0,0,0,0.8);
+  width: 800px !important;
+  font-family: 'Shadows Into Light', cursive;
+  color:#ff812a;
+}
+
+ul {
+	font-size: 25px;
+	color: white;
+
+}
+
+p {
+	font-size: 25px;
+
+}
+
+.row {
+  color:black;
+}

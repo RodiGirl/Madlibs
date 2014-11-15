@@ -1,39 +1,48 @@
-<h1>Listing stories</h1>
+<% if notice != nil %>
+  <p id="notice" class="alert alert-success" role="alert">
+    <%= notice %>
+  </p>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Section1</th>
-      <th>Word1type</th>
-      <th>Section2</th>
-      <th>Word2type</th>
-      <th>Section3</th>
-      <th>Word3type</th>
-      <th>Section4</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<center>
+<h1>Our Current Archive of User Generated Stories</h1>
+    
+
+<div class="row">
+  <div id="btn-add">
+                <%= link_to new_story_path, class: "btn btn-primary" do %>
+                  <span class="glyphicon glyphicon-plus"></span>Create a Template
+                <% end %>
+              </div>
+
+              <div id="btn-play">
+                <%= link_to showstory_path, class: "btn btn-primary" do %>
+                  <span class="glyphicon glyphicon-plus"></span>Play
+                <% end %>
+              </div>
     <% @stories.each do |story| %>
-      <tr>
-        <td><%= story.title %></td>
-        <td><%= story.section1 %></td>
-        <td><%= story.word1type %></td>
-        <td><%= story.section2 %></td>
-        <td><%= story.word2type %></td>
-        <td><%= story.section3 %></td>
-        <td><%= story.word3type %></td>
-        <td><%= story.section4 %></td>
-        <td><%= link_to 'Show', story %></td>
-        <td><%= link_to 'Edit', edit_story_path(story) %></td>
-        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="col-md-12">
 
-<br>
+       <div class="panel panel-default">
 
-<%= link_to 'New Story', new_story_path %>
+        <div class="panel-body">
+              
+
+         <u><h3><%= story.title %></h3></u>
+        
+         <p> <%= story.section1 %> [insert <%=story.word1type %>] <%=story.section2%> [insert <%=story.word2type%>] <%=story.section3%> [insert <%=story.word3type%>] <%=story.section4%></p>
+       
+         <div class="btn-group">
+            <%= link_to 'Show', story, class: "btn btn-default" %>
+            <%= link_to 'Edit', edit_story_path(story), class: "btn btn-default" %>
+            <%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+         </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Create New Story', new_story_path, class: "btn btn-primary" %>
+</center>

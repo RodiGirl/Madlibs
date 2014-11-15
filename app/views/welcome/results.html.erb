@@ -1,9 +1,19 @@
+
 <h1>Your Story!</h1>
+<div class="col-md-12">
+
+       <div class="panel panel-default">
+
+        <div class="panel-body">
+
 
 <% @stories.each do |story| %>
     <% if story.title == @title %>
-        <h4><%= story.title %></h4>
-        <p><%= story.section1 %> <strong><u><%= @firstword %></strong></u> <%=story.section2 %> <strong><u><%= @secondword %></strong></u> <%=story.section3%> <strong><u><%= @thirdword%></strong></u> <%= story.section4 %></p>
+        <u><h2><%= story.title %></h2></u>
+        <p><%= story.section1 %> <span class="userword"><%= @firstword %></span> <%=story.section2 %> <span class="userword"><%= @secondword %></span> <%=story.section3%> <span class="userword"><%= @thirdword%></span> <%= story.section4 %></p>
 
     <% end %>
 <% end %>
+</div>
+</div>
+</div>
